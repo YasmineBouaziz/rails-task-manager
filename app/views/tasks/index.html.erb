@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/42d0deab46.js" crossorigin="anonymous"></script>
+  <title>Task Manager</title>
+</head>
+<body>
+<div class="container">
+<h1>Task List</h1>
+<div class="list">
+<h2>To Do List</h2>
+<ul>
+<% @tasks.each do |task| %>
+<%# <%= task.title %><br>
+<li class="l">   <%= link_to task.title, task_path(task) %></li>
+
+
+<% end %>
+</ul>
+</div>
+
+<p>
+<button><%= link_to 'Add a task', tasks_new_path %></button>
+</p>
+</div>
+</body>
+</html>

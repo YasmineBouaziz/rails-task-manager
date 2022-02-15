@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<div class="container">
+<h1>Task Notes</h1>
+<div class="details">
+<h2><%= @task.details %></h2>
+<p>Completed: <%= @task.completed%></p>
+
+
+<button><%= link_to "Edit", edit_path(@task) %></button>
+
+<button><%= link_to "Home", tasks_path %></button>
+<br><br>
+<button><%= link_to 'Delete', task_path(@task), method: :delete, data: { confirm: "Are you sure?" }  %></button>
+
+</div>
+</div>
+
+</body>
+</html>
